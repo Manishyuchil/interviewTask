@@ -9,12 +9,12 @@ const Counter = props => {
     setCount(count + 1);
   };
 
-  let [newcendrol, setnewcendrol] = useState(props.newValue);
-  console.log(newcendrol);
+  let [newCendrol, setNewcendrol] = useState(props.newValue);
+  console.log(newCendrol);
   // let[newcendrolupda,setnewcendrol]=useState()
 
   let handleincr = () => {
-    setnewcendrol(newcendrol + 10);
+    setNewcendrol(newCendrol + 10);
   };
 
 
@@ -49,17 +49,24 @@ const Counter = props => {
 
         <div className={Style.new_block}>
           <p>Question2 getting value from component a increment it by 10</p>
-          <p className={Style.prop_Block}>{newcendrol}</p>
+          <p className={Style.prop_Block}>{newCendrol}</p>
           <button className={Style.prop_increment} onClick={handleincr}>
             Increment
           </button>
         </div>
 
-        <div className={Style.new_block1} style={{backgroundColor:bgcolor?"orange":"lightGrey"}}>
+        <div
+          className={Style.new_block1}
+          style={{ backgroundColor: bgcolor ? "orange" : "lightGrey" }}
+        >
           <p>Question3.Consider a variable which holds a Boolean value</p>
 
-
-          <button className={Style.prop_increment} onClick={()=>{setBgcolor(!bgcolor)}} >
+          <button
+            className={Style.prop_increment}
+            onClick={() => {
+              setBgcolor(!bgcolor);
+            }}
+          >
             ChangeColor
           </button>
         </div>
