@@ -3,10 +3,11 @@ import Style from "./counter.module.css";
 
 const Counter = props => {
   let [count, setCount] = useState(0);
-  let [color, setColor] = useState("aqua");
+  let [color, setColor] = useState("");
 
   let handleCount = () => {
     setCount(count + 1);
+   setColor("aqua")
   };
 
   let [newCendrol, setNewcendrol] = useState(props.newValue);
@@ -29,7 +30,8 @@ const Counter = props => {
         <div className={Style.box}>
           <div
             className={Style.circle}
-            style={{ backgroundColor: count > 0 ? color : "yellow" }}
+            style={ {background:color===""?"":color}}
+            
           >
             <button>{count}</button>
             <div
