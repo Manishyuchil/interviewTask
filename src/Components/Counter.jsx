@@ -5,7 +5,12 @@ const Counter = props => {
   let [count, setCount] = useState(0);
   let [color, setColor] = useState("");
 
+
   let handleCount = () => {
+    setCount(count + 1);
+  };
+
+  let handleCount1 = () => {
     setCount(count + 1);
    setColor("aqua")
   };
@@ -30,8 +35,7 @@ const Counter = props => {
         <div className={Style.box}>
           <div
             className={Style.circle}
-            style={ {background:color===""?"":color}}
-            
+            style={{ background: color === "" ? "" : color }}
           >
             <button>{count}</button>
             <div
@@ -43,7 +47,7 @@ const Counter = props => {
           </div>
         </div>
         <div>
-          <button onClick={handleCount} className={Style.btn}>
+          <button onClick={handleCount1} className={Style.btn}>
             Change Color
           </button>
           {/* //!===============question 1 ends here=============== */}
